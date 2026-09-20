@@ -1,13 +1,21 @@
 import { useState } from 'react'
 import { Link, Route, Routes } from 'react-router'
 import HomePage from './pages/home'
-import TemplatePage from './pages/template'
-import TemplateWithParamPage from './pages/template-with-param'
+import AboutPage from './pages/about'
+import Chatroom from './pages/chatroom'
+import Calendarpage from './pages/Calendarpage'
+import Reportpage from './pages/Reportpage'
+import Settingspage from './pages/SettingsPage'
+import Helppage from './pages/Helppage'
 
 const ROUTES = [
   { path: "/", element: <HomePage /> },
-  { path: "/template", element: <TemplatePage /> },
-  { path: "/template/:v", element: <TemplateWithParamPage /> },
+  { path: "/about", element: <AboutPage /> },
+  { path: "/chat", element: <Chatroom /> },
+  { path: "/calendar", element: <Calendarpage /> },
+  { path: "/report", element: <Reportpage /> },
+  { path: "/settings", element: <Settingspage /> },
+  { path: "/help", element: <Helppage /> }
 ]
 
 export default function Layout() {
@@ -20,11 +28,23 @@ export default function Layout() {
         <Link to="/">
           <button className="btn btn-ghost">Home</button>
         </Link>
-        <Link to="/template">
-          <button className="btn btn-ghost">Template</button>
+        <Link to="/about">
+          <button className="btn btn-ghost">About</button>
         </Link>
-        <Link to="/template/test">
-          <button className="btn btn-ghost">Template Parameter</button>
+        <Link to="/chat">
+          <button className="btn btn-ghost">Chat</button>
+        </Link>
+        <Link to="/calendar">
+          <button className="btn btn-ghost">Calendar</button>
+        </Link>
+        <Link to="/report">
+          <button className="btn btn-ghost">Report</button>
+        </Link>
+        <Link to="/settings">
+          <button className="btn btn-ghost">Settings</button>
+        </Link>
+        <Link to="/help">
+          <button className="btn btn-ghost">Help</button>
         </Link>
       </nav>
       {/* Main */}
